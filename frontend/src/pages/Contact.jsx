@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi'
+import API from '../api'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -22,7 +23,7 @@ export default function Contact() {
     }
     try {
       setLoading(true)
-      await axios.post('http://localhost:5000/api/inquiry', form)
+     await axios.post(`${API}/api/inquiry`, form)
       toast.success('Inquiry submitted! We\'ll contact you soon.')
       setForm({ name: '', email: '', phone: '', product: '', message: '' })
     } catch {

@@ -5,6 +5,7 @@ import axios from 'axios'
 import { FiPackage } from 'react-icons/fi'
 import { useCart } from '../context/CartContext'
 import toast from 'react-hot-toast'
+import API from '../api'
 
 const categories = ['all', 'spices', 'pulses', 'rice', 'garments']
 
@@ -31,8 +32,8 @@ export default function Products() {
       try {
         setLoading(true)
         const url = active === 'all'
-          ? 'http://localhost:5000/api/products'
-          : `http://localhost:5000/api/products?category=${active}`
+  ? `${API}/api/products`
+  : `${API}/api/products?category=${active}`
         const { data } = await axios.get(url)
         if (data.length > 0) setProducts(data)
         else setProducts(fallbackProducts.filter(p => active === 'all' || p.category === active))

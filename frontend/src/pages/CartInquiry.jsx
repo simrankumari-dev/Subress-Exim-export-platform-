@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { FiTrash2, FiSend } from 'react-icons/fi'
+import API from '../api'
 
 export default function CartInquiry() {
   const { cart, removeFromCart, clearCart, totalItems } = useCart()
@@ -30,7 +31,7 @@ export default function CartInquiry() {
 
     try {
       setLoading(true)
-      await axios.post('http://localhost:5000/api/inquiry', {
+      await axios.post(`${API}/api/inquiry`, {
         ...form,
         product: productList,
         message: `Products Interested In: ${productList}\n\nAdditional Message: ${form.message}`,

@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiGlobe, FiAward, FiPackage, FiUsers } from 'react-icons/fi'
@@ -18,7 +17,7 @@ const stats = [
 const categories = [
   {
     title: 'Indian Spices',
-    desc: 'Turmeric, Red Chilli, Cumin, Cardamom & more — sourced from finest Indian farms.',
+    desc: 'Turmeric, Red Chilli, Cumin, Cardamom — sourced from finest Indian farms.',
     img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80',
     tag: 'spices'
   },
@@ -36,68 +35,134 @@ const categories = [
   },
   {
     title: 'Garments',
-    desc: 'Men\'s, Women\'s & Cotton wear — modern fashion meets comfort.',
+    desc: "Men's, Women's & Cotton wear — modern fashion meets comfort.",
     img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
     tag: 'garments'
   },
+]
+
+const tickerItems = [
+  '🌿 Premium Export Quality Products',
+  '🚢 Shipping to 20+ Countries Worldwide',
+  '✅ FSSAI & International Certified',
+  '📦 Custom Packaging Available',
+  '🤝 Direct Farm to Export',
+  '⭐ 10+ Years of Trusted Export Experience',
 ]
 
 export default function Home() {
   return (
     <div style={{ background: '#0A0A0A' }}>
 
-      {/* HERO */}
+      {/* ── RUNNING TICKER ── */}
+      <div style={{
+        background: '#C9A84C',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap',
+        padding: '9px 0',
+        borderBottom: '1px solid rgba(201,168,76,0.4)',
+      }}>
+        <div style={{
+          display: 'inline-flex',
+          animation: 'ticker 28s linear infinite',
+        }}>
+          {[...tickerItems, ...tickerItems].map((item, i) => (
+            <span key={i} style={{
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              color: '#0A0A0A',
+              padding: '0 40px',
+            }}>
+              {item}
+            </span>
+          ))}
+        </div>
+        <style>{`
+          @keyframes ticker {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
+      </div>
+
+      {/* ── HERO ── */}
       <section style={{
-        minHeight: '100vh', position: 'relative',
-        display: 'flex', alignItems: 'center',
+        minHeight: '100vh',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
         overflow: 'hidden',
       }}>
+        {/* Background image */}
         <div style={{
           position: 'absolute', inset: 0,
           backgroundImage: 'url(https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1920&q=80)',
           backgroundSize: 'cover', backgroundPosition: 'center',
-          filter: 'brightness(0.2)',
+          filter: 'brightness(0.18)',
         }} />
+
+        {/* Gradient overlay */}
         <div style={{
           position: 'absolute', inset: 0,
-          background: 'linear-gradient(135deg, rgba(10,10,10,0.95) 50%, rgba(201,168,76,0.08) 100%)',
+          background: 'linear-gradient(120deg, rgba(10,10,10,0.97) 55%, rgba(201,168,76,0.06) 100%)',
         }} />
 
-        {/* Decorative lines */}
+        {/* Subtle corner glow */}
         <div style={{
-          position: 'absolute', top: 0, right: '15%',
-          width: '1px', height: '100%',
-          background: 'linear-gradient(to bottom, transparent, rgba(201,168,76,0.3), transparent)',
+          position: 'absolute', top: '10%', right: 0,
+          width: '320px', height: '320px',
+          background: 'radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%)',
+          pointerEvents: 'none',
         }} />
 
-        <div style={{ position: 'relative', padding: '0 8%', maxWidth: '900px' }}>
+        {/* Content */}
+        <div style={{ position: 'relative', padding: '0 8%', maxWidth: '860px' }}>
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
-            <span className="section-tag">Est. 2014 — Ahmedabad, India</span>
+            <span style={{
+              display: 'inline-block',
+              border: '1px solid rgba(201,168,76,0.45)',
+              color: '#C9A84C',
+              fontSize: '10px',
+              letterSpacing: '3px',
+              textTransform: 'uppercase',
+              padding: '6px 14px',
+              marginBottom: '32px',
+            }}>
+              Est. 2014 — Ahmedabad, India
+            </span>
           </motion.div>
 
           <motion.h1
             variants={fadeUp} initial="hidden" animate="show" custom={1}
             style={{
               fontFamily: 'Cormorant Garamond, serif',
-              fontSize: 'clamp(52px, 8vw, 110px)',
-              fontWeight: 300, lineHeight: 0.95,
-              color: '#F5F0E8', marginBottom: '30px',
+              fontSize: 'clamp(54px, 8vw, 108px)',
+              fontWeight: 300,
+              lineHeight: 0.93,
+              color: '#F5F0E8',
+              marginBottom: '32px',
+              letterSpacing: '-1px',
             }}
           >
             Global<br />
-            <span style={{ color: '#C9A84C', fontWeight: 700 }}>Excellence</span><br />
+            <span style={{ color: '#C9A84C', fontWeight: 700, fontStyle: 'italic' }}>Excellence</span><br />
             in Export
           </motion.h1>
 
           <motion.p
             variants={fadeUp} initial="hidden" animate="show" custom={2}
             style={{
-              fontSize: '16px', color: 'rgba(245,240,232,0.6)',
-              maxWidth: '480px', lineHeight: 1.8, marginBottom: '48px',
+              fontSize: '15px',
+              color: 'rgba(245,240,232,0.55)',
+              maxWidth: '440px',
+              lineHeight: 1.85,
+              marginBottom: '48px',
             }}
           >
             Premium spices, pulses, rice & garments from the heart of India —
-            delivered to 20+ countries with unmatched quality and trust.
+            delivered across 20+ countries with trust and unmatched quality.
           </motion.p>
 
           <motion.div
@@ -111,28 +176,34 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <motion.div
-          animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
           style={{
             position: 'absolute', bottom: '40px', left: '50%',
             transform: 'translateX(-50%)',
             display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px',
           }}
         >
-          <span style={{ fontSize: '10px', letterSpacing: '3px', color: 'rgba(245,240,232,0.4)' }}>SCROLL</span>
-          <div style={{ width: '1px', height: '40px', background: 'linear-gradient(to bottom, rgba(201,168,76,0.6), transparent)' }} />
+          <span style={{ fontSize: '9px', letterSpacing: '3px', color: 'rgba(245,240,232,0.35)', textTransform: 'uppercase' }}>
+            Scroll
+          </span>
+          <div style={{
+            width: '1px', height: '44px',
+            background: 'linear-gradient(to bottom, rgba(201,168,76,0.55), transparent)',
+          }} />
         </motion.div>
       </section>
 
-      {/* STATS */}
+      {/* ── STATS ── */}
       <section style={{
-        padding: '80px 8%',
+        padding: '72px 8%',
         background: '#111',
         borderTop: '1px solid rgba(201,168,76,0.1)',
         borderBottom: '1px solid rgba(201,168,76,0.1)',
       }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
           gap: '40px',
         }}>
           {stats.map(({ icon: Icon, number, label }, i) => (
@@ -143,26 +214,51 @@ export default function Home() {
               viewport={{ once: true }}
               style={{ textAlign: 'center' }}
             >
-              <Icon size={28} color="#C9A84C" style={{ marginBottom: '16px' }} />
+              <Icon size={26} color="#C9A84C" style={{ marginBottom: '14px', opacity: 0.85 }} />
               <div style={{
-                fontFamily: 'Cormorant Garamond', fontSize: '52px',
-                fontWeight: 700, color: '#C9A84C', lineHeight: 1,
-              }}>{number}</div>
-              <div style={{ fontSize: '11px', letterSpacing: '2px', color: 'rgba(245,240,232,0.5)', marginTop: '8px', textTransform: 'uppercase' }}>{label}</div>
+                fontFamily: 'Cormorant Garamond',
+                fontSize: '50px',
+                fontWeight: 700,
+                color: '#C9A84C',
+                lineHeight: 1,
+              }}>
+                {number}
+              </div>
+              <div style={{
+                fontSize: '10px', letterSpacing: '2px',
+                color: 'rgba(245,240,232,0.45)',
+                marginTop: '8px', textTransform: 'uppercase',
+              }}>
+                {label}
+              </div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* CATEGORIES */}
+      {/* ── CATEGORIES ── */}
       <section style={{ padding: '100px 8%' }}>
         <motion.div
           variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}
-          style={{ textAlign: 'center', marginBottom: '70px' }}
+          style={{ marginBottom: '60px' }}
         >
-          <span className="section-tag">What We Export</span>
-          <h2 style={{ fontFamily: 'Cormorant Garamond', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 300, color: '#F5F0E8' }}>
-            Our Product <span style={{ color: '#C9A84C', fontWeight: 600 }}>Categories</span>
+          <span style={{
+            display: 'inline-block',
+            fontSize: '10px', letterSpacing: '3px',
+            textTransform: 'uppercase', color: '#C9A84C',
+            borderBottom: '1px solid rgba(201,168,76,0.4)',
+            paddingBottom: '4px', marginBottom: '18px',
+          }}>
+            What We Export
+          </span>
+          <h2 style={{
+            fontFamily: 'Cormorant Garamond',
+            fontSize: 'clamp(34px, 5vw, 58px)',
+            fontWeight: 300,
+            color: '#F5F0E8',
+            lineHeight: 1.1,
+          }}>
+            Our Product <span style={{ color: '#C9A84C', fontWeight: 600, fontStyle: 'italic' }}>Categories</span>
           </h2>
         </motion.div>
 
@@ -176,12 +272,15 @@ export default function Home() {
               key={i}
               variants={fadeUp} initial="hidden" whileInView="show" custom={i}
               viewport={{ once: true }}
-              style={{ position: 'relative', overflow: 'hidden', cursor: 'pointer', height: '420px' }}
+              style={{
+                position: 'relative', overflow: 'hidden',
+                cursor: 'pointer', height: '420px',
+              }}
               whileHover="hover"
             >
               <motion.div
-                variants={{ hover: { scale: 1.08 } }}
-                transition={{ duration: 0.5 }}
+                variants={{ hover: { scale: 1.07 } }}
+                transition={{ duration: 0.55 }}
                 style={{
                   position: 'absolute', inset: 0,
                   backgroundImage: `url(${cat.img})`,
@@ -190,25 +289,47 @@ export default function Home() {
               />
               <div style={{
                 position: 'absolute', inset: 0,
-                background: 'linear-gradient(to top, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.3) 100%)',
+                background: 'linear-gradient(to top, rgba(10,10,10,0.96) 40%, rgba(10,10,10,0.2) 100%)',
               }} />
               <motion.div
-                variants={{ hover: { y: -8 } }}
+                variants={{ hover: { y: -6 } }}
                 transition={{ duration: 0.3 }}
                 style={{
                   position: 'absolute', bottom: 0, left: 0, right: 0,
-                  padding: '36px 28px',
+                  padding: '32px 26px',
                 }}
               >
-                <div style={{ fontSize: '10px', letterSpacing: '3px', color: '#C9A84C', marginBottom: '10px', textTransform: 'uppercase' }}>{cat.tag}</div>
-                <h3 style={{ fontFamily: 'Cormorant Garamond', fontSize: '26px', fontWeight: 600, color: '#F5F0E8', marginBottom: '12px' }}>{cat.title}</h3>
-                <p style={{ fontSize: '13px', color: 'rgba(245,240,232,0.6)', lineHeight: 1.7 }}>{cat.desc}</p>
-                <Link to={`/products?category=${cat.tag}`} style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '8px',
-                  color: '#C9A84C', textDecoration: 'none', fontSize: '12px',
-                  letterSpacing: '2px', textTransform: 'uppercase', marginTop: '20px',
+                <div style={{
+                  fontSize: '9px', letterSpacing: '3px',
+                  color: '#C9A84C', marginBottom: '10px',
+                  textTransform: 'uppercase',
                 }}>
-                  View All <FiArrowRight size={14} />
+                  {cat.tag}
+                </div>
+                <h3 style={{
+                  fontFamily: 'Cormorant Garamond',
+                  fontSize: '26px', fontWeight: 600,
+                  color: '#F5F0E8', marginBottom: '10px',
+                }}>
+                  {cat.title}
+                </h3>
+                <p style={{
+                  fontSize: '13px',
+                  color: 'rgba(245,240,232,0.55)',
+                  lineHeight: 1.7,
+                }}>
+                  {cat.desc}
+                </p>
+                <Link
+                  to={`/products?category=${cat.tag}`}
+                  style={{
+                    display: 'inline-flex', alignItems: 'center', gap: '8px',
+                    color: '#C9A84C', textDecoration: 'none',
+                    fontSize: '11px', letterSpacing: '2px',
+                    textTransform: 'uppercase', marginTop: '18px',
+                  }}
+                >
+                  View All <FiArrowRight size={13} />
                 </Link>
               </motion.div>
             </motion.div>
@@ -216,30 +337,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY US */}
+      {/* ── WHY US ── */}
       <section style={{
         padding: '100px 8%',
         background: '#111',
         borderTop: '1px solid rgba(201,168,76,0.1)',
       }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '80px', alignItems: 'center',
+        <div className="why-us-grid" style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '80px',
+          alignItems: 'center',
         }}>
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
-            <span className="section-tag">Why Choose Us</span>
-            <h2 style={{ fontFamily: 'Cormorant Garamond', fontSize: 'clamp(32px, 4vw, 52px)', fontWeight: 300, color: '#F5F0E8', marginBottom: '30px' }}>
-              Trusted by Buyers<br /><span style={{ color: '#C9A84C', fontWeight: 600 }}>Across the Globe</span>
+            <span style={{
+              display: 'inline-block',
+              fontSize: '10px', letterSpacing: '3px',
+              textTransform: 'uppercase', color: '#C9A84C',
+              borderBottom: '1px solid rgba(201,168,76,0.4)',
+              paddingBottom: '4px', marginBottom: '22px',
+            }}>
+              Why Choose Us
+            </span>
+            <h2 style={{
+              fontFamily: 'Cormorant Garamond',
+              fontSize: 'clamp(30px, 4vw, 50px)',
+              fontWeight: 300, color: '#F5F0E8',
+              marginBottom: '24px', lineHeight: 1.15,
+            }}>
+              Trusted by Buyers<br />
+              <span style={{ color: '#C9A84C', fontWeight: 600, fontStyle: 'italic' }}>
+                Across the Globe
+              </span>
             </h2>
-            <p style={{ color: 'rgba(245,240,232,0.6)', fontSize: '14px', lineHeight: 1.9, marginBottom: '40px' }}>
-              We combine decades of expertise in Indian agriculture and textiles
-              with modern export standards. Every product is quality-checked,
-              certified, and delivered on time.
+            <p style={{
+              color: 'rgba(245,240,232,0.5)',
+              fontSize: '14px', lineHeight: 1.9,
+              marginBottom: '36px',
+            }}>
+              Decades of expertise in Indian agriculture and textiles,
+              backed by modern export standards — quality-checked, certified, on time.
             </p>
             <Link to="/about" className="btn-primary">Our Story</Link>
           </motion.div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {[
               { title: 'Quality Certified', desc: 'All products meet international food safety and export standards.' },
               { title: 'Direct Sourcing', desc: 'We work directly with farmers and manufacturers — no middlemen.' },
@@ -251,52 +393,75 @@ export default function Home() {
                 variants={fadeUp} initial="hidden" whileInView="show" custom={i}
                 viewport={{ once: true }}
                 style={{
-                  display: 'flex', gap: '20px', alignItems: 'flex-start',
-                  padding: '24px', border: '1px solid rgba(201,168,76,0.15)',
-                  background: 'rgba(201,168,76,0.03)',
+                  display: 'flex', gap: '18px', alignItems: 'flex-start',
+                  padding: '22px 20px',
+                  border: '1px solid rgba(201,168,76,0.12)',
+                  background: 'rgba(201,168,76,0.025)',
                   transition: 'border-color 0.3s',
                 }}
-                whileHover={{ borderColor: 'rgba(201,168,76,0.4)' }}
+                whileHover={{ borderColor: 'rgba(201,168,76,0.35)' }}
               >
                 <div style={{
-                  width: '8px', height: '8px', background: '#C9A84C',
-                  borderRadius: '50%', marginTop: '6px', flexShrink: 0,
+                  width: '6px', height: '6px',
+                  background: '#C9A84C', borderRadius: '50%',
+                  marginTop: '7px', flexShrink: 0,
                 }} />
                 <div>
-                  <h4 style={{ color: '#F5F0E8', fontSize: '15px', marginBottom: '6px', fontFamily: 'Cormorant Garamond', fontWeight: 600 }}>{item.title}</h4>
-                  <p style={{ color: 'rgba(245,240,232,0.5)', fontSize: '13px', lineHeight: 1.7 }}>{item.desc}</p>
+                  <h4 style={{
+                    color: '#F5F0E8', fontSize: '15px',
+                    marginBottom: '5px',
+                    fontFamily: 'Cormorant Garamond', fontWeight: 600,
+                  }}>
+                    {item.title}
+                  </h4>
+                  <p style={{
+                    color: 'rgba(245,240,232,0.45)',
+                    fontSize: '13px', lineHeight: 1.7,
+                  }}>
+                    {item.desc}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-
-        <style>{`
-          @media (max-width: 768px) {
-            section > div[style*="grid-template-columns: 1fr 1fr"] {
-              grid-template-columns: 1fr !important;
-              gap: 40px !important;
-            }
-          }
-        `}</style>
       </section>
 
-      {/* CTA BANNER */}
+      {/* ── CTA BANNER ── */}
       <section style={{
         padding: '100px 8%', textAlign: 'center',
-        background: 'linear-gradient(135deg, #0A0A0A 0%, #1A1508 50%, #0A0A0A 100%)',
-        borderTop: '1px solid rgba(201,168,76,0.15)',
+        background: 'linear-gradient(135deg, #0A0A0A 0%, #181208 50%, #0A0A0A 100%)',
+        borderTop: '1px solid rgba(201,168,76,0.12)',
       }}>
         <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
-          <span className="section-tag">Ready to Export?</span>
-          <h2 style={{
-            fontFamily: 'Cormorant Garamond', fontSize: 'clamp(36px, 5vw, 64px)',
-            fontWeight: 300, color: '#F5F0E8', margin: '20px 0 30px',
+          <span style={{
+            display: 'inline-block',
+            fontSize: '10px', letterSpacing: '3px',
+            textTransform: 'uppercase', color: '#C9A84C',
+            borderBottom: '1px solid rgba(201,168,76,0.4)',
+            paddingBottom: '4px', marginBottom: '22px',
           }}>
-            Let's Build a <span style={{ color: '#C9A84C', fontWeight: 700 }}>Global Partnership</span>
+            Ready to Export?
+          </span>
+          <h2 style={{
+            fontFamily: 'Cormorant Garamond',
+            fontSize: 'clamp(34px, 5vw, 62px)',
+            fontWeight: 300, color: '#F5F0E8',
+            margin: '0 0 24px',
+            lineHeight: 1.1,
+          }}>
+            Let's Build a{' '}
+            <span style={{ color: '#C9A84C', fontWeight: 700, fontStyle: 'italic' }}>
+              Global Partnership
+            </span>
           </h2>
-          <p style={{ color: 'rgba(245,240,232,0.55)', fontSize: '15px', maxWidth: '520px', margin: '0 auto 48px', lineHeight: 1.8 }}>
-            Whether you need a small sample order or bulk supply — we're ready to serve you with the best of India.
+          <p style={{
+            color: 'rgba(245,240,232,0.45)',
+            fontSize: '14px', maxWidth: '480px',
+            margin: '0 auto 44px', lineHeight: 1.85,
+          }}>
+            Small sample order or bulk supply — we're ready to serve you
+            with the finest products from India.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/contact" className="btn-primary">Request a Quote</Link>
@@ -304,6 +469,16 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* ── RESPONSIVE ── */}
+      <style>{`
+        @media (max-width: 768px) {
+          .why-us-grid {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+        }
+      `}</style>
 
     </div>
   )

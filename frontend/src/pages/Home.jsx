@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FiArrowRight, FiGlobe, FiAward, FiPackage, FiUsers } from 'react-icons/fi'
 
 import masale from "../assets/masale.png"
-import pulses from "../assets/masale.png"
+import pulses from "../assets/pulses.png"
 import garment from "../assets/garments.png"
 import rice from "../assets/rice.jpg"
 

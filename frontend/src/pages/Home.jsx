@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FiArrowRight, FiGlobe, FiAward, FiPackage, FiUsers } from 'react-icons/fi'
 
 import masale from "../assets/masale.png"
-import pulses from "../assets/pulses.png"
+import pulses from "../assets/pulses.webp"
 import garment from "../assets/garments.png"
 import rice from "../assets/rice.jpg"
 
@@ -100,21 +100,16 @@ export default function Home() {
         alignItems: 'center',
         overflow: 'hidden',
       }}>
-        {/* Background image */}
         <div style={{
           position: 'absolute', inset: 0,
           backgroundImage: 'url(https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1920&q=80)',
           backgroundSize: 'cover', backgroundPosition: 'center',
           filter: 'brightness(0.18)',
         }} />
-
-        {/* Gradient overlay */}
         <div style={{
           position: 'absolute', inset: 0,
           background: 'linear-gradient(120deg, rgba(10,10,10,0.97) 55%, rgba(201,168,76,0.06) 100%)',
         }} />
-
-        {/* Subtle corner glow */}
         <div style={{
           position: 'absolute', top: '10%', right: 0,
           width: '320px', height: '320px',
@@ -122,18 +117,14 @@ export default function Home() {
           pointerEvents: 'none',
         }} />
 
-        {/* Content */}
         <div style={{ position: 'relative', padding: '0 8%', maxWidth: '860px' }}>
           <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}>
             <span style={{
               display: 'inline-block',
               border: '1px solid rgba(201,168,76,0.45)',
-              color: '#C9A84C',
-              fontSize: '10px',
-              letterSpacing: '3px',
-              textTransform: 'uppercase',
-              padding: '6px 14px',
-              marginBottom: '32px',
+              color: '#C9A84C', fontSize: '10px',
+              letterSpacing: '3px', textTransform: 'uppercase',
+              padding: '6px 14px', marginBottom: '32px',
             }}>
               Est. 2014 — Ahmedabad, India
             </span>
@@ -144,10 +135,8 @@ export default function Home() {
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(54px, 8vw, 108px)',
-              fontWeight: 300,
-              lineHeight: 0.93,
-              color: '#F5F0E8',
-              marginBottom: '32px',
+              fontWeight: 300, lineHeight: 0.93,
+              color: '#F5F0E8', marginBottom: '32px',
               letterSpacing: '-1px',
             }}
           >
@@ -159,11 +148,8 @@ export default function Home() {
           <motion.p
             variants={fadeUp} initial="hidden" animate="show" custom={2}
             style={{
-              fontSize: '15px',
-              color: 'rgba(245,240,232,0.55)',
-              maxWidth: '440px',
-              lineHeight: 1.85,
-              marginBottom: '48px',
+              fontSize: '15px', color: 'rgba(245,240,232,0.55)',
+              maxWidth: '440px', lineHeight: 1.85, marginBottom: '48px',
             }}
           >
             Premium spices, pulses, rice & garments from the heart of India —
@@ -179,7 +165,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
@@ -222,10 +207,8 @@ export default function Home() {
               <Icon size={26} color="#C9A84C" style={{ marginBottom: '14px', opacity: 0.85 }} />
               <div style={{
                 fontFamily: 'Cormorant Garamond',
-                fontSize: '50px',
-                fontWeight: 700,
-                color: '#C9A84C',
-                lineHeight: 1,
+                fontSize: '50px', fontWeight: 700,
+                color: '#C9A84C', lineHeight: 1,
               }}>
                 {number}
               </div>
@@ -259,9 +242,7 @@ export default function Home() {
           <h2 style={{
             fontFamily: 'Cormorant Garamond',
             fontSize: 'clamp(34px, 5vw, 58px)',
-            fontWeight: 300,
-            color: '#F5F0E8',
-            lineHeight: 1.1,
+            fontWeight: 300, color: '#F5F0E8', lineHeight: 1.1,
           }}>
             Our Product <span style={{ color: '#C9A84C', fontWeight: 600, fontStyle: 'italic' }}>Categories</span>
           </h2>
@@ -283,19 +264,27 @@ export default function Home() {
               }}
               whileHover="hover"
             >
+              {/* ✅ IMAGE — contain se poori dikhegi, cut nahi hogi */}
               <motion.div
                 variants={{ hover: { scale: 1.07 } }}
                 transition={{ duration: 0.55 }}
                 style={{
                   position: 'absolute', inset: 0,
                   backgroundImage: `url(${cat.img})`,
-                  backgroundSize: 'cover', backgroundPosition: 'center',
+                  backgroundSize: 'contain',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundColor: '#0A0A0A',
                 }}
               />
+
+              {/* Dark overlay */}
               <div style={{
                 position: 'absolute', inset: 0,
-                background: 'linear-gradient(to top, rgba(10,10,10,0.96) 40%, rgba(10,10,10,0.2) 100%)',
+                background: 'linear-gradient(to top, rgba(10,10,10,0.97) 35%, rgba(10,10,10,0.3) 100%)',
               }} />
+
+              {/* Text content */}
               <motion.div
                 variants={{ hover: { y: -6 } }}
                 transition={{ duration: 0.3 }}
@@ -351,8 +340,7 @@ export default function Home() {
         <div className="why-us-grid" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: '80px',
-          alignItems: 'center',
+          gap: '80px', alignItems: 'center',
         }}>
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
             <span style={{
@@ -377,8 +365,7 @@ export default function Home() {
             </h2>
             <p style={{
               color: 'rgba(245,240,232,0.5)',
-              fontSize: '14px', lineHeight: 1.9,
-              marginBottom: '36px',
+              fontSize: '14px', lineHeight: 1.9, marginBottom: '36px',
             }}>
               Decades of expertise in Indian agriculture and textiles,
               backed by modern export standards — quality-checked, certified, on time.
@@ -452,8 +439,7 @@ export default function Home() {
             fontFamily: 'Cormorant Garamond',
             fontSize: 'clamp(34px, 5vw, 62px)',
             fontWeight: 300, color: '#F5F0E8',
-            margin: '0 0 24px',
-            lineHeight: 1.1,
+            margin: '0 0 24px', lineHeight: 1.1,
           }}>
             Let's Build a{' '}
             <span style={{ color: '#C9A84C', fontWeight: 700, fontStyle: 'italic' }}>

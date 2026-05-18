@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiGlobe, FiAward, FiPackage, FiUsers } from 'react-icons/fi'
 
+import masale from "../assets/masale.png"
+import pulses from "../assets/masale.png"
+import garment from "../assets/garments.png"
+import rice from "../assets/rice.jpg"
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.7, delay: i * 0.15 } })
@@ -18,25 +23,25 @@ const categories = [
   {
     title: 'Indian Spices',
     desc: 'Turmeric, Red Chilli, Cumin, Cardamom — sourced from finest Indian farms.',
-    img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80',
+    img: masale,
     tag: 'spices'
   },
   {
     title: 'Pulses',
     desc: 'Chickpeas, Toor Dal, Moong Dal — pure nutrition, zero compromise.',
-    img: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80',
+    img: pulses,
     tag: 'pulses'
   },
   {
     title: 'Premium Rice',
     desc: 'Basmati, Sella, Raw Rice — long grain, aromatic, export quality.',
-    img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=600&q=80',
+    img: rice,
     tag: 'rice'
   },
   {
     title: 'Garments',
     desc: "Men's, Women's & Cotton wear — modern fashion meets comfort.",
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    img: garment,
     tag: 'garments'
   },
 ]

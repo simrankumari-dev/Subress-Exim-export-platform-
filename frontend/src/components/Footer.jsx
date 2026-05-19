@@ -26,8 +26,12 @@ export default function Footer() {
             Premium spices, pulses, rice & garments exporter from Ahmedabad, India. Trusted globally.
           </p>
           <div style={{ display: 'flex', gap: '12px', marginTop: '24px' }}>
-            {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-              <a key={i} href="#" style={{
+            {[
+              { Icon: FaFacebookF, href: 'https://www.facebook.com' },
+              { Icon: FaInstagram, href: 'https://www.instagram.com' },
+              { Icon: FaLinkedinIn, href: 'https://www.linkedin.com' },
+            ].map(({ Icon, href }, i) => (
+              <a key={i} href={href} target="_blank" rel="noopener noreferrer" style={{
                 width: '38px', height: '38px', border: '1px solid rgba(201,168,76,0.3)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 color: '#C9A84C', transition: 'all 0.3s', textDecoration: 'none',

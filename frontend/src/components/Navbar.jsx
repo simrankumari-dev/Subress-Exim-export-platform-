@@ -29,7 +29,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => setMenuOpen(false), [location])
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location])
 
   const links = [
     { to: '/', label: 'Home' },
@@ -156,13 +158,15 @@ export default function Navbar() {
               Get Quote
             </Link>
 
-            <button onClick={() => setMenuOpen(!menuOpen)}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
               style={{
                 background: 'none', border: 'none',
                 color: '#C9A84C', fontSize: '24px',
                 cursor: 'pointer', display: 'none',
               }}
-              className="mobile-menu-btn">
+              className="mobile-menu-btn"
+            >
               {menuOpen ? <FiX /> : <FiMenu />}
             </button>
           </div>

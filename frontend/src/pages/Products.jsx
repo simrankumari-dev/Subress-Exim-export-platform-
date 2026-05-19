@@ -30,9 +30,9 @@ import sona from "../assets/rice/sona.webp"
 
 
 import cottonKurta from "../assets/cloths/cotton-kurta.webp"
-import denimJacket from "../assets/cloths/denim-jacket.webp"
+import womentop from "../assets/cloths/women-tops.webp"
 import hoodie from "../assets/cloths/hoodie.webp"
-import  poloTshirt from "../assets/cloths/polo-tshirt.webp"
+import tshirts from "../assets/cloths/tshirts.webp"
 import saree from "../assets/cloths/saree.webp"
 import wollenSweater from "../assets/cloths/wollen-sweater.webp"
 import kurits from "../assets/cloths/kurtis.webp"
@@ -175,10 +175,10 @@ const garmentsProducts = [
   },
   {
     _id: 'c2',
-    name: 'Denim Jacket',
+    name: 'Women Top',
     category: 'clothing',
-    description: 'Stylish denim jacket with a modern fit and durable fabric.',
-    image: denimJacket,
+    description: 'Stylish women top designed with modern fashion and comfortable fabric.',
+    image: womentop,
     origin: 'India'
   },
   {
@@ -191,10 +191,10 @@ const garmentsProducts = [
   },
   {
     _id: 'c4',
-    name: 'Polo T-Shirt',
+    name: 'T-Shirt',
     category: 'clothing',
-    description: 'Classic polo t-shirt with premium fabric and elegant style.',
-    image: poloTshirt,
+    description: 'Classic t-shirt made with premium fabric for everyday comfort and style.',
+    image: tshirts,
     origin: 'India'
   },
   {

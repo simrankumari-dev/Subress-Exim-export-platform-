@@ -264,27 +264,26 @@ export default function Home() {
               }}
               whileHover="hover"
             >
-              {/* ✅ IMAGE — contain se poori dikhegi, cut nahi hogi */}
+              {/* ✅ IMAGE FIX — cover + top center */}
               <motion.div
                 variants={{ hover: { scale: 1.07 } }}
                 transition={{ duration: 0.55 }}
                 style={{
                   position: 'absolute', inset: 0,
                   backgroundImage: `url(${cat.img})`,
-                  backgroundSize: 'contain',
-                  backgroundPosition: 'center',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'top center',
                   backgroundRepeat: 'no-repeat',
-                  backgroundColor: '#0A0A0A',
                 }}
               />
 
-              {/* Dark overlay */}
+              {/* Dark gradient overlay */}
               <div style={{
                 position: 'absolute', inset: 0,
-                background: 'linear-gradient(to top, rgba(10,10,10,0.97) 35%, rgba(10,10,10,0.3) 100%)',
+                background: 'linear-gradient(to top, rgba(10,10,10,0.97) 35%, rgba(10,10,10,0.15) 100%)',
               }} />
 
-              {/* Text content */}
+              {/* Text */}
               <motion.div
                 variants={{ hover: { y: -6 } }}
                 transition={{ duration: 0.3 }}

@@ -29,6 +29,18 @@ import brown from "../assets/rice/brown-rice.webp"
 import sona from "../assets/rice/sona.webp"
 
 
+import cottonKurta from "../assets/cloths/cotton-kurta.webp"
+import denimJacket from "../assets/cloths/denim-jacket.webp"
+import hoodie from "../assets/cloths/hoodie.webp"
+import  poloTshirt from "../assets/cloths/polo-tshirt.webp"
+import saree from "../assets/cloths/saree.webp"
+import wollenSweater from "../assets/cloths/wollen-sweater.webp"
+import kurits from "../assets/cloths/kurtis.webp"
+import linenShirt from "../assets/cloths/linen-shirt.webp"
+
+
+
+
 
 // ── SPICES ──
 const spicesProducts = [
@@ -153,9 +165,70 @@ const riceProducts = [
 
 // ── GARMENTS ──
 const garmentsProducts = [
-  { _id: 'g1', name: 'Cotton Kurta', category: 'garments', description: 'Premium cotton kurtas in modern designs.', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80', origin: 'India' },
-  { _id: 'g2', name: 'Men\'s Formal Wear', category: 'garments', description: 'Elegant formal wear crafted from quality fabric.', image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&q=80', origin: 'India' },
-  { _id: 'g3', name: 'Women\'s Cotton Wear', category: 'garments', description: 'Comfortable and stylish women\'s cotton collection.', image: 'https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?w=400&q=80', origin: 'India' },
+  {
+    _id: 'c1',
+    name: 'Cotton Kurta',
+    category: 'clothing',
+    description: 'Comfortable cotton kurta crafted with breathable fabric for daily wear.',
+    image: cottonKurta,
+    origin: 'India'
+  },
+  {
+    _id: 'c2',
+    name: 'Denim Jacket',
+    category: 'clothing',
+    description: 'Stylish denim jacket with a modern fit and durable fabric.',
+    image: denimJacket,
+    origin: 'India'
+  },
+  {
+    _id: 'c3',
+    name: 'Hoodie',
+    category: 'clothing',
+    description: 'Soft and warm hoodie designed for comfort and casual fashion.',
+    image: hoodie,
+    origin: 'India'
+  },
+  {
+    _id: 'c4',
+    name: 'Polo T-Shirt',
+    category: 'clothing',
+    description: 'Classic polo t-shirt with premium fabric and elegant style.',
+    image: poloTshirt,
+    origin: 'India'
+  },
+  {
+    _id: 'c5',
+    name: 'Saree',
+    category: 'clothing',
+    description: 'Traditional saree with elegant design and premium craftsmanship.',
+    image: saree,
+    origin: 'India'
+  },
+  {
+    _id: 'c6',
+    name: 'Woollen Sweater',
+    category: 'clothing',
+    description: 'Warm woollen sweater perfect for winter comfort and style.',
+    image: wollenSweater,
+    origin: 'India'
+  },
+  {
+    _id: 'c7',
+    name: 'Kurtis',
+    category: 'clothing',
+    description: 'Trendy and comfortable kurtis suitable for casual and festive wear.',
+    image: kurits,
+    origin: 'India'
+  },
+  {
+    _id: 'c8',
+    name: 'Linen Shirt',
+    category: 'clothing',
+    description: 'Premium linen shirt with lightweight fabric and modern design.',
+    image: linenShirt,
+    origin: 'India'
+  }
 ]
 
 // ── ALL COMBINED ──

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
+const scrollTop = () => window.scrollTo({ top: 0, behavior: 'instant' })
+
 export default function Footer() {
   return (
     <footer style={{
@@ -41,10 +43,14 @@ export default function Footer() {
         <div>
           <h4 style={{ color: '#C9A84C', fontSize: '11px', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '24px' }}>Navigation</h4>
           {['/', '/products', '/about', '/contact'].map((path, i) => (
-            <Link key={i} to={path} style={{
-              display: 'block', color: 'rgba(245,240,232,0.5)', textDecoration: 'none',
-              fontSize: '13px', marginBottom: '12px', transition: 'color 0.3s',
-            }}
+            <Link
+              key={i}
+              to={path}
+              onClick={scrollTop}
+              style={{
+                display: 'block', color: 'rgba(245,240,232,0.5)', textDecoration: 'none',
+                fontSize: '13px', marginBottom: '12px', transition: 'color 0.3s',
+              }}
               onMouseEnter={e => e.target.style.color = '#C9A84C'}
               onMouseLeave={e => e.target.style.color = 'rgba(245,240,232,0.5)'}
             >

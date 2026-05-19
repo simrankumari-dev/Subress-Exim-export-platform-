@@ -14,6 +14,8 @@ const tickerItems = [
   '⭐ 10+ Years of Trusted Export Experience',
 ]
 
+const scrollTop = () => window.scrollTo({ top: 0, behavior: 'instant' })
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -82,7 +84,7 @@ export default function Navbar() {
           }}
         >
           {/* Logo */}
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/" onClick={scrollTop} style={{ textDecoration: 'none' }}>
             <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
               <span style={{
                 fontFamily: 'Cormorant Garamond, serif',
@@ -99,12 +101,16 @@ export default function Navbar() {
           {/* Desktop Links */}
           <div style={{ display: 'flex', gap: '40px' }} className="desktop-nav">
             {links.map(link => (
-              <Link key={link.to} to={link.to} style={{
-                textDecoration: 'none',
-                fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase',
-                color: location.pathname === link.to ? '#C9A84C' : 'rgba(245,240,232,0.7)',
-                transition: 'color 0.3s', fontWeight: 500,
-              }}
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={scrollTop}
+                style={{
+                  textDecoration: 'none',
+                  fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase',
+                  color: location.pathname === link.to ? '#C9A84C' : 'rgba(245,240,232,0.7)',
+                  transition: 'color 0.3s', fontWeight: 500,
+                }}
                 onMouseEnter={e => e.target.style.color = '#C9A84C'}
                 onMouseLeave={e => e.target.style.color = location.pathname === link.to ? '#C9A84C' : 'rgba(245,240,232,0.7)'}
               >
@@ -141,7 +147,10 @@ export default function Navbar() {
               )}
             </button>
 
-            <Link to="/contact" className="btn-primary desktop-nav"
+            <Link
+              to="/contact"
+              onClick={scrollTop}
+              className="btn-primary desktop-nav"
               style={{ fontSize: '11px', padding: '10px 24px' }}
             >
               Get Quote
@@ -174,10 +183,17 @@ export default function Navbar() {
               }}
             >
               {links.map(link => (
-                <Link key={link.to} to={link.to} style={{
-                  textDecoration: 'none', fontSize: '14px',
-                  letterSpacing: '3px', textTransform: 'uppercase', color: '#F5F0E8',
-                }}>{link.label}</Link>
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={scrollTop}
+                  style={{
+                    textDecoration: 'none', fontSize: '14px',
+                    letterSpacing: '3px', textTransform: 'uppercase', color: '#F5F0E8',
+                  }}
+                >
+                  {link.label}
+                </Link>
               ))}
             </motion.div>
           )}
@@ -185,7 +201,6 @@ export default function Navbar() {
 
       </div>
 
-      {/* ── TICKER ANIMATION + RESPONSIVE ── */}
       <style>{`
         @keyframes ticker {
           0%   { transform: translateX(0); }

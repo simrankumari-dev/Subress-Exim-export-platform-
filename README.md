@@ -1,21 +1,21 @@
 # 🌍 Subress Exim - Import & Export Company Website
 
-A modern and responsive **Import & Export Company Website** built using the **MERN Stack**. This application represents a professional business website where customers can explore company information, products, and services, while administrators can efficiently manage website content through a secure admin panel.
+A modern and responsive **Import & Export Company Website** built using the **MERN Stack**. This project is designed to provide a professional online presence for an import-export business, allowing visitors to explore the company, its services, products, and easily get in touch through a contact form. The website focuses on delivering a clean user experience with responsive design and smooth navigation.
 
 ---
 
 ## 🚀 Features
 
-- 🌍 Professional business landing page
-- 🏢 Company profile and services section
-- 📦 Product showcase
-- 📞 Contact Us page
-- 🔐 Secure Admin Authentication
-- 📂 Product Management (Add, Update, Delete)
-- 📧 Contact form with Email Integration
-- ✨ Smooth animations using Framer Motion
-- 🔔 Real-time notifications with React Hot Toast
+- 🌍 Professional Business Website
+- 🏢 Company Introduction
+- ℹ️ About Us Section
+- 🚢 Services Section
+- 📦 Product Showcase
+- 📞 Contact Us Page
+- 📧 Contact Form with Email Integration
+- ✨ Smooth Page Animations
 - 📱 Fully Responsive Design
+- ⚡ Fast and Optimized User Experience
 
 ---
 
@@ -53,10 +53,10 @@ Subress-Exim/
 │   │   ├── assets/
 │   │   ├── components/
 │   │   ├── pages/
-│   │   ├── context/
 │   │   ├── services/
 │   │   ├── App.jsx
-│   │   └── main.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
 │
 ├── server/
 │   ├── config/
@@ -68,6 +68,7 @@ Subress-Exim/
 │   ├── server.js
 │   └── package.json
 │
+├── README-images/
 └── README.md
 ```
 
@@ -75,13 +76,13 @@ Subress-Exim/
 
 ## ⚙️ Installation
 
-### Clone the repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/subress-exim.git
 ```
 
-### Go to project directory
+### Navigate to Project Folder
 
 ```bash
 cd subress-exim
@@ -105,7 +106,7 @@ npm install
 
 ## ▶️ Run the Project
 
-### Start Backend
+### Start Backend Server
 
 ```bash
 cd server
@@ -119,11 +120,18 @@ cd client
 npm run dev
 ```
 
+The application will run locally on:
+
+```
+Frontend : http://localhost:5173
+Backend  : http://localhost:5000
+```
+
 ---
 
 ## 🔑 Environment Variables
 
-Create a `.env` file inside the **server** folder and add the following variables.
+Create a `.env` file inside the **server** directory and add the following variables:
 
 ```env
 PORT=5000
@@ -141,73 +149,82 @@ EMAIL_PASSWORD=Your_Email_Password
 
 ## 📸 Screenshots
 
-> Add screenshots of your website inside the `README-images` folder.
-
-Example:
+Create a folder named **README-images** in the root directory and add screenshots with the following names:
 
 ```
 README-images/
-    home.png
-    about.png
-    services.png
-    products.png
-    contact.png
-    admin-dashboard.png
+│
+├── home.png
+├── about.png
+├── services.png
+├── products.png
+└── contact.png
 ```
 
-Then use
+Then display them like this:
 
-```md
-## Home
+### 🏠 Home Page
 
 ![Home](README-images/home.png)
 
-## About
+---
+
+### 🏢 About Us
 
 ![About](README-images/about.png)
 
-## Services
+---
+
+### 🚢 Services
 
 ![Services](README-images/services.png)
 
-## Products
+---
+
+### 📦 Products
 
 ![Products](README-images/products.png)
 
-## Contact
+---
+
+### 📞 Contact
 
 ![Contact](README-images/contact.png)
 
-## Admin Dashboard
-
-![Admin Dashboard](README-images/admin-dashboard.png)
-```
-
 ---
 
-## 🎯 Highlights
+## 🎯 Project Highlights
 
 - Responsive Design
-- Secure Authentication
 - MERN Stack Architecture
-- Product Management System
+- Professional Business Website
 - Contact Form with Email Support
-- Clean and Modern UI
-- Smooth Page Animations
-- Component-Based Development
+- Smooth Animations
+- Fast Navigation
+- Reusable React Components
+- Clean UI Design
+- Mobile Friendly Layout
 
 ---
 
 ## 📈 Future Improvements
 
-- Product Search & Filters
-- Customer Inquiry Dashboard
-- Image Upload with Cloudinary
-- Admin Analytics Dashboard
-- Multi-language Support
-- SEO Optimization
+- Product Search
 - Product Categories
-- Deployment with Docker & AWS
+- Google Maps Integration
+- Live Chat Support
+- SEO Optimization
+- Image Gallery
+- Performance Optimization
+- Docker Deployment
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+Feel free to fork this repository and submit a pull request.
 
 ---
 
@@ -215,11 +232,17 @@ Then use
 
 **Simran Kumari**
 
-- GitHub: https://github.com/your-username
-- LinkedIn: https://linkedin.com/in/your-profile
+- GitHub: https://github.com/your-github-username
+- LinkedIn: https://linkedin.com/in/your-linkedin-profile
 
 ---
 
 ## ⭐ Support
 
-If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
+If you found this project useful, please consider giving it a ⭐ **Star** on GitHub.
+
+It helps others discover the project and motivates further improvements.
+
+---
+
+### Thank You ❤️

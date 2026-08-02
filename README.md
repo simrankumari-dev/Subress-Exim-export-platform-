@@ -32,7 +32,6 @@ A modern and responsive **Import & Export Company Website** built using the **ME
 - 🌍 Professional Business Website
 - 🏢 Company Introduction
 - ℹ️ About Us Section
-- 🚢 Services Section
 - 📦 Product Showcase
 - 📞 Contact Us Page
 - 📧 Contact Form with Email Integration
@@ -102,7 +101,7 @@ Subress-Exim/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/subress-exim.git
+git clone https://github.com/simrankumari-dev/Subress-Exim-export-platform-
 ```
 
 ### Navigate to Project Folder
@@ -132,14 +131,14 @@ npm install
 ### Start Backend Server
 
 ```bash
-cd server
+cd backend
 npm start
 ```
 
 ### Start Frontend
 
 ```bash
-cd client
+cd frontend
 npm run dev
 ```
 
@@ -154,7 +153,7 @@ Backend  : http://localhost:5000
 
 ## 🔑 Environment Variables
 
-Create a `.env` file inside the **server** directory and add the following variables:
+Create a `.env` file inside the **backend** directory and add the following variables:
 
 ```env
 PORT=5000
@@ -169,15 +168,6 @@ EMAIL_PASSWORD=Your_Email_Password
 ```
 
 ---
-
-
-
-
-
-
-
-
-
 
 ---
 
@@ -224,8 +214,8 @@ Feel free to fork this repository and submit a pull request.
 
 **Simran Kumari**
 
-- GitHub: https://github.com/your-github-username
-- LinkedIn: https://linkedin.com/in/your-linkedin-profile
+- GitHub: https://github.com/simrankumari-dev
+- LinkedIn: https://www.linkedin.com/in/simrankumari-tech/
 
 ---
 

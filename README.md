@@ -4,6 +4,29 @@ A modern and responsive **Import & Export Company Website** built using the **ME
 
 ---
 
+### 🏠 Home Page
+
+![Home](README-images/home.jpeg)
+
+---
+### Features Section
+![Features](README-images/features.jpeg)
+
+### Product Categories
+![productCategory.jpeg](README-images/productCategory.jpeg)
+
+### Our Products
+![Our-Products.jpeg](README-images/Our_Product.jpeg)
+
+
+### 🏢 About Us
+
+![About](README-images/who-we-are.jpeg)
+
+### 📞 Contact
+
+![Contact](README-images/Contact-section.jpeg)
+
 ## 🚀 Features
 
 - 🌍 Professional Business Website
@@ -147,44 +170,10 @@ EMAIL_PASSWORD=Your_Email_Password
 
 ---
 
-## 📸 Screenshots
-
-Create a folder named **README-images** in the root directory and add screenshots with the following names:
-
-```
-README-images/
-│
-├── home.png
-├── about.png
-├── services.png
-├── products.png
-└── contact.png
-```
-
-Then display them like this:
-
-### 🏠 Home Page
-
-![Home](README-images/home.jpeg)
-
----
-### Features Section
-![Features](README-images/features.jpeg)
-
-### Product Categories
-![productCategory.jpeg](README-images/productCategory.jpeg)
-
-### Our Products
-![Our-Products.jpeg](README-images/Our_Product.jpeg)
 
 
-### 🏢 About Us
 
-![About](README-images/who-we-are.jpeg)
 
-### 📞 Contact
-
-![Contact](README-images/Contact-section.jpeg)
 
 
 

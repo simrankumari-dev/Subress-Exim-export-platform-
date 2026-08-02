@@ -165,31 +165,34 @@ Then display them like this:
 
 ### 🏠 Home Page
 
-![Home](README-images/home.png)
+![Home](README-images/home.jpeg)
 
 ---
+### Features Section
+![Features](README-images/features.jpeg)
+
+### Product Categories
+![productCategory.jpeg](README-images/productCategory.jpeg)
+
+### Our Products
+![Our-Products.jpeg](README-images/Our_Product.jpeg)
+
 
 ### 🏢 About Us
 
-![About](README-images/about.png)
-
----
-
-### 🚢 Services
-
-![Services](README-images/services.png)
-
----
-
-### 📦 Products
-
-![Products](README-images/products.png)
-
----
+![About](README-images/who-we-are.jpeg)
 
 ### 📞 Contact
 
-![Contact](README-images/contact.png)
+![Contact](README-images/Contact-section.jpeg)
+
+
+
+
+
+---
+
+
 
 ---
 

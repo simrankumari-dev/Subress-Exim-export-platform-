@@ -16,7 +16,7 @@ A modern and responsive **Import & Export Company Website** built using the **ME
 ![productCategory.jpeg](README-images/productCategory.jpeg)
 
 ### Our Products
-![Our-Products.jpeg](README-images/Our_Product.jpeg)
+![Our-Products.jpeg](README-images/Our_Products.jpeg)
 
 
 ### 🏢 About Us
